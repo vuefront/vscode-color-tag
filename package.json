@@ -1,0 +1,109 @@
+{
+  "name": "vscode-vuefront-color-tags",
+  "displayName": "VueFront Color Tags",
+  "description": "Сolorful VueFront сomponent tags",
+  "version": "0.1.0",
+  "publisher": "vuefront",
+  "license": "MIT",
+  "homepage": "https://github.com/vuefront/vscode-color-tags/blob/main/README.md",
+  "bugs": {
+    "url": "https://github.com/vuefront/vscode-color-tags/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vuefront/vscode-color-tags.git"
+  },
+  "engines": {
+    "vscode": "^1.55.0"
+  },
+  "icon": "img/icon.png",
+  "categories": [
+    "Other",
+    "Themes"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "colors": [
+      {
+        "id": "vuefront.aColor",
+        "description": "Color of Atom tag.",
+        "defaults": {
+          "dark": "#e9c500",
+          "light": "#e9c500",
+          "highContrast": "#e9c500",
+          "highContrastLght": "#e9c500"
+        }
+      },
+      {
+        "id": "vuefront.mColor",
+        "description": "Color of Atom tag.",
+        "defaults": {
+          "dark": "#52ba81",
+          "light": "#52ba81",
+          "highContrast": "#52ba81",
+          "highContrastLght": "#52ba81"
+        }
+      },
+      {
+        "id": "vuefront.oColor",
+        "description": "Color of Organism tag.",
+        "defaults": {
+          "dark": "#566bff",
+          "light": "#566bff",
+          "highContrast": "#566bff",
+          "highContrastLght": "#566bff"
+        }
+      },
+      {
+        "id": "vuefront.lColor",
+        "description": "Color of Loader tag.",
+        "defaults": {
+          "dark": "#bcc3f3",
+          "light": "#bcc3f3",
+          "highContrast": "#bcc3f3",
+          "highContrastLght": "#bcc3f3"
+        }
+      },
+      {
+        "id": "vuefront.tColor",
+        "description": "Color of Template tag.",
+        "defaults": {
+          "dark": "#af52ba",
+          "light": "#af52ba",
+          "highContrast": "#af52ba",
+          "highContrastLght": "#af52ba"
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "test-compile": "tsc -p ./",
+    "test-watch": "tsc -watch -p ./",
+    "pretest": "npm run test-compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.55.0",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "eslint": "^7.19.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.2.1",
+    "ts-loader": "^8.0.14",
+    "typescript": "^4.1.3",
+    "vscode-test": "^1.5.0",
+    "webpack": "^5.19.0",
+    "webpack-cli": "^4.4.0"
+  }
+}

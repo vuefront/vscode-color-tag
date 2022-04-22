@@ -1,0 +1,23 @@
+<template>
+    <div>
+        <ul>
+            <li><vf-a-blog-post :post="post" /></li>
+        </ul>
+    </div>
+    <vf-t-blog-post :post="post">
+        <vf-l-o-blog-post :post="post">
+            <vf-o-blog-post :post="post">
+                <vf-m-blog-post :post="post">
+                    <vf-a-blog-post :post="post" />
+                </vf-m-blog-post>
+            </vf-o-blog-post>
+        </vf-l-o-blog-post>
+    </vf-t-blog-post>    
+    <div>
+        <vf-a-blog-post :post="post" />
+        <vf-m-blog-post :post="post" />
+        <vf-o-blog-post :post="post" />
+        <vf-l-o-blog-post :post="post" />
+        <vf-t-blog-post :post="post" />
+    </div>
+</template>
